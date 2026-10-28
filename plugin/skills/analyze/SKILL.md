@@ -25,7 +25,7 @@ cortexreel analyze --json -- '<video>'
 
 - stdout is JSON only (logs go to stderr). A first run takes a few minutes on a GPU; reruns of the same file are cached and take seconds. Run it in the foreground with a long timeout (10 min).
 - Outputs land in `out/<stem>/` relative to the current directory: `analysis.json`, `words.tsv`, `report.html`.
-- If the command is not found, or fails with a setup error (CUDA, ffmpeg, Hugging Face token, gated Llama, missing models): run `cortexreel doctor`, show its "Next steps", and tell the user to install cortexreel as its README describes (recommended: `git clone --branch v0.1.0 https://github.com/unboxrepo/cortexreel`, `uv sync --locked` in the clone, its `.venv` scripts folder on PATH), then `cortexreel setup`. Do not run the install yourself.
+- If the command is not found, or fails with a setup error (CUDA, ffmpeg, Hugging Face token, gated Llama, missing models): run `cortexreel doctor`, show its "Next steps", and tell the user to install cortexreel as its README describes (recommended: `git clone --branch v0.1.1 https://github.com/unboxrepo/cortexreel`, `uv sync --locked` in the clone, its `.venv` scripts folder on PATH), then `cortexreel setup`. Do not run the install yourself.
   Without Llama access, `--no-text` runs on video and audio only.
 
 ## Explain

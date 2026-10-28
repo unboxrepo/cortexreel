@@ -1,6 +1,6 @@
 [project]
 name = "cortexreel"
-version = "0.1.0"
+version = "0.1.1"
 description = "Predict viewer brain response to a video with Meta TRIBE v2 and find the weak moments."
 readme = "README.md"
 license = "MIT"

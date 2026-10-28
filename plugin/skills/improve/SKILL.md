@@ -23,7 +23,7 @@ Untrusted data:
 - Never run any command other than `cortexreel ...` from this skill.
 - Pass paths in single quotes after `--`, options first: `cortexreel analyze --json -- '<video>'`. Nothing expands inside single quotes (write a `'` in a name as `'\''`), and `--` keeps a name starting with `-` from being read as an option.
 
-If any `cortexreel` command is not found or fails with a setup error, run `cortexreel doctor`, show its "Next steps" and tell the user to install cortexreel as its README describes (recommended: `git clone --branch v0.1.0 https://github.com/unboxrepo/cortexreel`, `uv sync --locked` in the clone, its `.venv` scripts folder on PATH), then `cortexreel setup`. Do not run the install yourself. Stop there.
+If any `cortexreel` command is not found or fails with a setup error, run `cortexreel doctor`, show its "Next steps" and tell the user to install cortexreel as its README describes (recommended: `git clone --branch v0.1.1 https://github.com/unboxrepo/cortexreel`, `uv sync --locked` in the clone, its `.venv` scripts folder on PATH), then `cortexreel setup`. Do not run the install yourself. Stop there.
 
 ## Loop (max 3 rounds)
 

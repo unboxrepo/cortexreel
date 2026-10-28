@@ -21,7 +21,7 @@ exactly what `uv.lock` pins (hashes included): the CUDA 12.4 build of torch, Pil
 and every other dependency at a reviewed version.
 
 ```sh
-git clone --branch v0.1.0 https://github.com/unboxrepo/cortexreel
+git clone --branch v0.1.1 https://github.com/unboxrepo/cortexreel
 cd cortexreel
 uv sync --locked
 uv run cortexreel doctor     # checks GPU, ffmpeg, Hugging Face access; prints next steps
@@ -39,7 +39,7 @@ the project's CUDA torch index, but not its `[tool.uv]` override for Pillow: wit
 
 ```sh
 echo "pillow>=13" > overrides.txt
-uv tool install --overrides overrides.txt git+https://github.com/unboxrepo/cortexreel@v0.1.0
+uv tool install --overrides overrides.txt git+https://github.com/unboxrepo/cortexreel@v0.1.1
 cortexreel doctor
 cortexreel setup
 ```
