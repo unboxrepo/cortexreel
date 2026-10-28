@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cortexreel",
+  "description": "cortexreel: predict viewer brain response to a video with Meta TRIBE v2 and fix the weak moments.",
+  "owner": {
+    "name": "unboxrepo"
+  },
+  "plugins": [
+    {
+      "name": "cortexreel",
+      "description": "Analyze a short video with cortexreel and improve it in an analyze, recut, re-measure loop.",
+      "author": {
+        "name": "unboxrepo"
+      },
+      "source": "./plugin",
+      "category": "productivity",
+      "homepage": "https://github.com/unboxrepo/cortexreel"
+    }
+  ]
+}

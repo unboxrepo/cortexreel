@@ -1,0 +1,12 @@
+{
+  "name": "cortexreel",
+  "version": "0.1.0",
+  "description": "Analyze a short video with cortexreel (Meta TRIBE v2 brain-response predictions) and improve it in an analyze, recut, re-measure loop, or compare several versions and splice their strongest parts.",
+  "author": {
+    "name": "unboxrepo"
+  },
+  "homepage": "https://github.com/unboxrepo/cortexreel",
+  "repository": "https://github.com/unboxrepo/cortexreel",
+  "license": "MIT",
+  "keywords": ["video", "editing", "reels", "tribe-v2", "engagement"]
+}

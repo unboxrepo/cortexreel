@@ -1,0 +1,80 @@
+{
+  "atlas": "destrieux",
+  "atlas_note": "Destrieux 2009 (aparc.a2009s) labels on fsaverage5, via nilearn.datasets.fetch_atlas_surf_destrieux. Every label is used in both hemispheres.",
+  "overlap_note": "face_body shares G_oc-temp_lat-fusifor and S_occipital_ant with visual. Overlap is allowed: each group is averaged on its own. face_body has weight 0, so it is reported but does not count toward engagement.",
+  "groups": {
+    "visual": {
+      "weight": 0.30,
+      "description": "Occipital cortex: calcarine, cuneus, lingual, fusiform, lateral occipital, occipital pole.",
+      "labels": [
+        "S_calcarine",
+        "G_cuneus",
+        "G_oc-temp_med-Lingual",
+        "S_oc-temp_med_and_Lingual",
+        "G_oc-temp_lat-fusifor",
+        "G_occipital_sup",
+        "G_occipital_middle",
+        "G_and_S_occipital_inf",
+        "S_oc_sup_and_transversal",
+        "S_oc_middle_and_Lunatus",
+        "S_occipital_ant",
+        "Pole_occipital"
+      ]
+    },
+    "auditory": {
+      "weight": 0.20,
+      "description": "Heschl's gyrus and sulcus, planum temporale, posterior lateral fissure, lateral superior temporal gyrus.",
+      "labels": [
+        "G_temp_sup-G_T_transv",
+        "S_temporal_transverse",
+        "G_temp_sup-Plan_tempo",
+        "Lat_Fis-post",
+        "G_temp_sup-Lateral"
+      ]
+    },
+    "language": {
+      "weight": 0.25,
+      "description": "Inferior frontal gyrus (opercular, triangular), superior temporal sulcus, middle temporal gyrus, angular and supramarginal gyri.",
+      "labels": [
+        "G_front_inf-Opercular",
+        "G_front_inf-Triangul",
+        "S_temporal_sup",
+        "G_temporal_middle",
+        "G_pariet_inf-Angular",
+        "G_pariet_inf-Supramar"
+      ]
+    },
+    "attention": {
+      "weight": 0.25,
+      "description": "Dorsal attention network: intraparietal sulcus, superior parietal lobule, middle frontal gyrus, superior frontal sulcus, precentral sulcus.",
+      "labels": [
+        "S_intrapariet_and_P_trans",
+        "G_parietal_sup",
+        "G_front_middle",
+        "S_front_sup",
+        "S_precentral-sup-part",
+        "S_precentral-inf-part"
+      ]
+    },
+    "face_body": {
+      "weight": 0.0,
+      "description": "Ventral and lateral occipito-temporal cortex: fusiform, inferior temporal gyrus and sulcus, lateral occipito-temporal sulcus, anterior occipital sulcus.",
+      "labels": [
+        "G_oc-temp_lat-fusifor",
+        "G_temporal_inf",
+        "S_temporal_inf",
+        "S_oc-temp_lat",
+        "S_occipital_ant"
+      ]
+    }
+  },
+  "engagement": {
+    "comment": "engagement = 100 * sigmoid((raw - center) / scale). Fixed constants, NOT fitted per video, so scores are comparable across videos. Placeholder values: to be calibrated on a reference set of videos.",
+    "center": 0.0,
+    "scale": 0.1
+  },
+  "onset_correction": {
+    "comment": "TRIBE scores the first ~12 s of any video lower than the same footage placed mid-video (model warm-up, not content). Measured 2026-10-28: 5 reels, each re-analyzed starting 8-15 s in; points[i] = mean gap at second i (std 3.5-8.4). These points are added back to the engagement curve. Calibrated on short-form screen-recording reels with voice-over; other genres may differ.",
+    "points": [5.8, 13.8, 12.0, 13.3, 13.5, 11.4, 11.0, 10.0, 7.1, 5.4, 5.4, 1.9]
+  }
+}

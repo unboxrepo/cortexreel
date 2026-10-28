@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+
+# cortexreel outputs and caches
+out/
+cache/
+.cache/
+
+# Model outputs and media (tiny test fixtures are allowed)
+*.npz
+*.mp4
+!tests/fixtures/*.mp4
+samples/
+TASARIM.md
