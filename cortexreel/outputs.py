@@ -12,7 +12,11 @@ import stat
 from pathlib import Path
 
 OUT_ROOT = Path("out")
-_LINK_TAGS = (stat.IO_REPARSE_TAG_SYMLINK, stat.IO_REPARSE_TAG_MOUNT_POINT)
+# The stat module only defines these on Windows; the values are fixed by the NT API.
+_LINK_TAGS = (
+    getattr(stat, "IO_REPARSE_TAG_SYMLINK", 0xA000000C),
+    getattr(stat, "IO_REPARSE_TAG_MOUNT_POINT", 0xA0000003),
+)
 
 
 class OutputError(ValueError):
